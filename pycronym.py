@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import string
 import random
+import sys
 
 reltime = random #aHOHOO!
 
@@ -35,7 +36,8 @@ def pycronym(acronym):
 
 
 def main():
-    print 'LOL => ' + ' '.join(pycronym("LOL"))
+    for arg in sys.argv[1:]:
+        print arg.upper() + ' => ' + ' '.join(pycronym(arg.upper()))
 
 main()
 
